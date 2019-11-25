@@ -1,0 +1,16 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  ホーム: /
+  ログ: /archives
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/zero.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/zero.js
