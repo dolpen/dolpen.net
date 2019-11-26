@@ -1,6 +1,10 @@
+<% if (page.posts.length > 0) { %>
+<section class="recent">
+<h1><%=config.title%></h1>
+<h2><%=__('recent')%></h2>
+<%-partial('partials/articles', {articles: page.posts.sort('date', -1).limit(10)})%>
+</section>
+<% } %>
+<%-partial('partials/paginator')%>
 
-<%-partial('partials/recent-posts')%>
 
-<div id="paginator">
-  <%-paginator()%>
-</div>

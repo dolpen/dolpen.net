@@ -1,0 +1,6 @@
+<ol class="articles"><% articles.each(article => { %>
+<li class="article">
+<time datetime="<%=article.date.toJSON()%>"><%=date(article.date)%></time>
+<a href="<%=url_for(article.path)%>"><%=article.title%></a>
+</li>
+<% }) %></ol>

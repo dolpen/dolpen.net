@@ -1,0 +1,12 @@
+<header>
+  <nav class="head">
+    <a href="<%=config.root%>"><%=__('home')%></a>
+    <ul>
+      <% if (Object.keys(config.links).length > 0) { %>
+      <% for(let key in config.links) { %>
+      <li><a href="<%=config.links[key]%>"><%=__(key)%></a></li>
+      <% } %>
+      <% } %>
+    </ul>
+  </nav>
+</header>

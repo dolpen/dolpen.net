@@ -1,16 +1,10 @@
-
 # html lang
-language: en
-
-# main menu navigation
-menu:
-  ホーム: /
-  ログ: /archives
+i18n_dir: :lang
 
 # stylesheets loaded in the <head>
 stylesheets:
-- /css/zero.css
+  - /css/zero.css
 
 # scripts loaded in the end of the body
 scripts:
-- /js/zero.js
+  - /js/zero.js
