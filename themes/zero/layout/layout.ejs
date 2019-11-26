@@ -1,3 +1,4 @@
+<!doctype html>
 <%
 var pageTitle = page.title || config.subtitle || '';
 if (is_archive()) pageTitle = __('archive');
@@ -7,8 +8,7 @@ if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
 pageTitle += ' [ ' + config.title + ' ]';
 %>
-<!DOCTYPE html>
-<html lang="<%=theme.language%>">
+<html lang="<%=theme.language%>" amp>
 <%-partial('common/head',{title: pageTitle })%>
 <body>
 <%-partial('common/header')%>

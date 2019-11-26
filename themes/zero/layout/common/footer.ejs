@@ -1,9 +1,3 @@
 <footer><nav class="foot">
   <a href="<%=config.root%>"><%=__('home')%></a>
 </nav></footer>
-<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-  <!-- scripts list from theme config.yml -->
-  <% theme.scripts.forEach(url => { %>
-    <script src="<%=url%>"></script>
-  <% }); %>
-<% } %>
