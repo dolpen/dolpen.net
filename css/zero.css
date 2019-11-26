@@ -1,4 +1,71 @@
+:root {
+    --x-width: 24rem;
+}
+
+html {
+    color: #111;
+    font-family: sans-serif;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+@media (min-width: 1000px) {
+    html {
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: 24px;
+    }
+}
+
 
 body {
-  margin: 0
+    margin: 1rem 4rem 4rem 4rem;
+    word-wrap: break-word;
+}
+
+header, main, footer {
+    margin: 0 auto;
+    max-width: calc(var(--x-width));
+}
+
+header a {
+    color: inherit;
+    display: inline-block;
+}
+
+header ul {
+    display: inline-block;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+header li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+
+/*-- list */
+
+ol.articles {
+    list-style-type: none;
+}
+
+time {
+    color: #559;
+    display: block;
+    font-size: 0.8rem;
+}
+
+/*-- article */
+
+h1 {
+    font-size: 1.5rem;
+}
+h2 {
+    font-size: 1.2rem;
 }
