@@ -26,7 +26,7 @@ jobs:
         id: public
         with:
           path: public
-          key: ${{ runner.OS }}-public-${GITHUB_SHA}
+          key: ${{ runner.OS }}-public-${{ github.sha }}
           restore-keys: |
             ${{ runner.OS }}-public-
       - name: Install
