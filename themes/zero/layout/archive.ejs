@@ -44,8 +44,6 @@ const archivesList = list_archives({ show_count: false });
 <% } else { %>
 <section class="archive">
 <h2><%=page.year + '-' + page.month%></h2>
-<%-partial('partials/articles', {articles: page.posts})%>
+<%-partial('common/articles', {articles: page.posts})%>
 </section>
-<%-partial('partials/paginator')%>
-
 <% } %>

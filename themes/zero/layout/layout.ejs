@@ -8,7 +8,7 @@ if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
 pageTitle += ' [ ' + config.title + ' ]';
 %>
-<html lang="<%=theme.language%>" amp>
+<html lang="<%=theme.language%>">
 <%-partial('common/head',{title: pageTitle })%>
 <body>
 <%-partial('common/header')%>

@@ -1,5 +1,4 @@
 <section class="category">
 <h2><%=page.category%></h2>
-<%-partial('partials/articles', {articles: page.posts})%>
+<%-partial('common/articles', {articles: page.posts})%>
 </section>
-<%-partial('partials/paginator')%>

@@ -50,11 +50,10 @@ highlight:
 
 # Home page setting
 # the custom index2 generator, can be array or object
-index2_generator:
-  - layout: 'index' # use existing index layout
-    path: '' # output to root directory: http://127.0.0.1:4000/
-    index: true # Set whether index, results is_home() is true or not
-
+#index2_generator:
+#  - layout: 'index' # use existing index layout
+#    path: '' # output to root directory: http://127.0.0.1:4000/
+#    index: true # Set whether index, results is_home() is true or not
 
 links:
   about: /about

@@ -1,5 +1,4 @@
 <section class="tag">
 <h2><%=page.tag%></h2>
-<%-partial('partials/articles', {articles: page.posts})%>
+<%-partial('common/articles', {articles: page.posts})%>
 </section>
-<%-partial('partials/paginator')%>
