@@ -29,6 +29,14 @@ jobs:
           key: ${{ runner.OS }}-public-${{ github.sha }}
           restore-keys: |
             ${{ runner.OS }}-public-
+      - name: Cache db.json
+        uses: actions/cache@v1
+        id: db
+        with:
+          path: db.json
+          key: ${{ runner.OS }}-db-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.OS }}-db-
       - name: Install
         if: steps.cache_node_modules.cache-hit != 'true'
         run: npm install
