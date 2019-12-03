@@ -18,17 +18,7 @@ jobs:
         id: cache_node_modules
         with:
           path: node_modules
-          key: ${{ runner.OS }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-node-
-      - name: Cache public
-        uses: actions/cache@v1
-        id: cache_public
-        with:
-          path: public
-          key: ${{ runner.OS }}-public-${GITHUB_SHA}
-          restore-keys: |
-            ${{ runner.OS }}-public-${GITHUB_SHA}
+          key: ${{ runner.OS }}-npm-${{ hashFiles('**/package-lock.json') }}
       - name: Install
         if: steps.cache_node_modules.cache-hit != 'true'
         run: npm install
