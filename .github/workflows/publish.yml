@@ -33,7 +33,7 @@ jobs:
         uses: actions/cache@v1
         id: db
         with:
-          path: db.json
+          path: db
           key: ${{ runner.OS }}-db-${{ github.sha }}
           restore-keys: |
             ${{ runner.OS }}-db-
