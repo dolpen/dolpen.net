@@ -37,13 +37,24 @@ jobs:
           key: ${{ runner.OS }}-db-${{ github.sha }}
           restore-keys: |
             ${{ runner.OS }}-db-
-      - name: Install
+      - name: npm i
         if: steps.cache_node_modules.cache-hit != 'true'
         run: npm install
-      - name: Build
+      - name: prepare db
+        run: |
+          if [ -e db/db.json ]; then
+            cp db/db.json ./
+          fi
+      - name: npm build
         run: npm run build
         env:
           TZ: Asia/Tokyo
+      - name: update db
+        run: |
+          mkdir -p db
+          if [ -e db/db.json ]; then
+          cp -f ./db.json db/
+          fi
       - name: deploy
         uses: peaceiris/actions-gh-pages@v2.4.0
         env:
