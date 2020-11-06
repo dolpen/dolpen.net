@@ -1,4 +1,22 @@
 <article class="post">
-  <h1><%=page.title%></h1>
-  <%-page.content%>
+    <section class="content">
+        <h1><%= page.title %></h1>
+        <%- page.content %>
+    </section>
+    <hr>
+    <nav class="related">
+        <h3>関連エントリ</h3>
+        <ul class="groups">
+            <% page.categories.each(category => { %>
+                <li class="category">
+                    <a href="<%= url_for(category.path) %>"><%- category.name || "Untitled" %></a>
+                </li>
+            <% }) %>
+            <% page.tags.each(tag => { %>
+                <li class="tag">
+                    <a href="<%= url_for(tag.path) %>"><%- tag.name || "Untitled" %></a>
+                </li>
+            <% }) %>
+        </ul>
+    </nav>
 </article>
