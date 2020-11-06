@@ -51,7 +51,7 @@ header li {
 
 /*-- list */
 
-ol.articles {
+ul.articles, ul.groups {
     list-style-type: none;
 }
 
@@ -63,7 +63,7 @@ time {
 
 /*-- article */
 
-article p {
+article section.content p {
     text-indent: 1rem;
     padding-left: 1rem;
 }
@@ -74,4 +74,26 @@ h1 {
 
 h2 {
     font-size: 1.2rem;
+}
+
+.related li {
+    display: inline-block;
+    margin: 0 .5em;
+    padding: 0 .25em;
+    min-width: 1.5em;
+    text-align: center;
+}
+
+.related li.category {
+    background: #8888dd;
+}
+
+.related li.tag {
+    background: #db7f3d;
+    border-radius: 2em;
+}
+
+.related a {
+    color: #111111;
+    text-decoration: none;
 }
