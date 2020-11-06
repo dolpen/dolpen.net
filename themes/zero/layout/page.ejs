@@ -1,4 +1,26 @@
+<%
+var groups = [];
+var isCategoryIndex = page.type === 'categories';
+var isTagIndex = page.type === 'tags';
+var isPostIndex = page.type === 'category' || page.type === 'tag';
+var isGroupIndex = isTagIndex || isCategoryIndex;
+
+if (isTagIndex) {
+    groups = site.tags;
+} else if (isCategoryIndex) {
+    groups = site.categories;
+}
+%>
+<% if (isGroupIndex) { %>
 <article class="page">
-  <h1><%=page.title%></h1>
-  <%-page.content%>
+    <h1><%= page.title %></h1>
+    <%- page.content %>
+    <%- partial('common/groups', {groups: groups.sort('name')}) %>
 </article>
+<% } else { %>
+<article class="page">
+    <h1><%= page.title %></h1>
+    <%- page.content %>
+</article>
+<% } %>
+

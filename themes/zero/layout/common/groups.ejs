@@ -1,0 +1,8 @@
+<ul class="groups">
+    <% groups.each(group => { %>
+        <li class="group">
+            <a href="<%= url_for(group.path) %>">
+                <%- group.name || "Untitled" %></a>
+        </li>
+    <% }) %>
+</ul>
