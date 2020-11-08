@@ -102,3 +102,8 @@ feed:
   autodiscovery: true
   template:
     - ./source/custom.xml
+
+# hexo-image-caption
+image_caption:
+  enable: true
+  class_name: caption

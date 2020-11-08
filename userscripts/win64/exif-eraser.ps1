@@ -20,7 +20,7 @@ $SourcePath = (Join-Path -Path $CurrentPath '..\..\images' -Resolve)
 $DestPath = (Join-Path -Path $CurrentPath '..\..\source\images' -Resolve)
 
 # サムネイルにする際に画像を縮小する場合の長辺の長さ。十分に大きくすると縮小されない
-$ThumbnailSize = 640
+$ThumbnailSize = 800
 
 # 処理対象のファイル拡張子（元拡張子、サムネイル拡張子、書き出しフォーマット）
 $AllowedExtension = @(
