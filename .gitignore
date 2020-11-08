@@ -14,4 +14,4 @@ public/
 .deploy*/
 
 # image source for exif-eracer
-images/
+images/*
