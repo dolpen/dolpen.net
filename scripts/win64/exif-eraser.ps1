@@ -1,4 +1,10 @@
-## Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+## about_Execution_Policies エラーが出た場合
+## 1. powershell 起動
+## 2. > Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+## 3. スクリプト実行
+
+Add-Type -AssemblyName System.Drawing
 
 # ------------------------------------------------------------------------
 # 設定項目
@@ -19,7 +25,7 @@ $ThumbnailSize = 640
 # 処理対象のファイル拡張子（元拡張子、サムネイル拡張子、書き出しフォーマット）
 $AllowedExtension = @(
 [pscustomobject]@{ Original = 'jpg'; MapTo = 'jpg'; Format = [System.Drawing.Imaging.ImageFormat]::Jpeg }
-[pscustomobject]@{ Original = 'jpeg'; MapTo = 'jpg'; Format = [System.Drawing.Imaging.ImageFormat]::Jpeg  }
+[pscustomobject]@{ Original = 'jpeg'; MapTo = 'jpg'; Format = [System.Drawing.Imaging.ImageFormat]::Jpeg }
 #[pscustomobject]@{ Original = 'png'; MapTo = 'png'; Format = [System.Drawing.Imaging.ImageFormat]::Png }
 )
 
@@ -210,7 +216,6 @@ function Process-Once($SourceFile, $DestPath)
     }
 
 
-    Add-Type -AssemblyName System.Drawing
 
     echo "[app] loading $SourceFileName ..."
     $Image = New-Object System.Drawing.Bitmap($SourceFullPath)
