@@ -97,3 +97,15 @@ h2 {
     color: #111111;
     text-decoration: none;
 }
+p img {
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+}
+
+span.caption {
+    display: block;
+    margin: 1em auto;
+    font-size: 12px;
+    text-align: center;
+}

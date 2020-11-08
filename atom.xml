@@ -6,7 +6,7 @@
     <link href="http://dolpen.net/atom.xml" rel="self"/>
     
     <link href="http://dolpen.net/"/>
-    <updated>2020-11-06T15:05:30.937Z</updated>
+    <updated>2020-11-08T14:16:18.909Z</updated>
     <id>http://dolpen.net/</id>
     
     <author>
@@ -15,6 +15,30 @@
     </author>
     
     <generator uri="https://hexo.io/">Hexo</generator>
+    
+    <entry>
+        <title>スープを大量に作った</title>
+        <link href="http://dolpen.net/articles/2030-11-08.html"/>
+        <id>http://dolpen.net/articles/2030-11-08.html</id>
+        <published>2030-11-07T15:00:00.000Z</published>
+        <updated>2020-11-08T14:16:18.909Z</updated>
+        
+        <content type="html"><![CDATA[<h2 id="寸胴は一家に一つはあってもいい"><a href="#寸胴は一家に一つはあってもいい" class="headerlink" title="寸胴は一家に一つはあってもいい"></a>寸胴は一家に一つはあってもいい</h2><p>近所のスーパーで白菜がひと玉150円だったので、スープを作ろうと思い購入した。</p><p>寸胴鍋に水を少し張り、スライスした干し椎茸を入れ、芯から取り外して洗った白菜の葉を内部で重ね合わせて蓋を閉じ、弱火で半ば蒸していくように煮ていった。白菜のかさが半分ほどになったら、あらためて水分量を調整しつつ豚バラ肉と鶏肉を入れて火を強める。アクをあらかた取ったら弱火で好きなだけ煮込む。要するに、妹尾河童の著書をきっかけに国内で流行り始めたピェンロー（扁炉）とほとんど同じようなものである。違いがあるとすれば、鍋ではなくスープを目的としているのでごま油を使わないことと、白菜を刻まないことだ。</p><p><img src="/images/20201108T130224.jpg" alt="寸胴鍋の様子"><span class="caption">寸胴鍋の様子</span></p><p>白菜を葉のまま放り込むと、芯の部分がとろけるというよりはみずみずしいままになる。このまま皿にとって塩や醤油をかけて食べるとよく出来た煮浸しのようでとても美味しい。無限にワシワシ食べられてしまうので、すでに上記写真の時点でかなり減っている。美味しいのが悪い。</p><p><img src="/images/20201107T191648.jpg" alt="ラーメン"><span class="caption">ラーメン</span></p><p>スープ自体も複数の出汁が効いていて、塩や醤油を出汁に混ぜてうどんやラーメンにも使えるので大変良い。スープが特別日持ちするわけではないが、使いみちが多くて大量生産しても軽々使い切れるのが良いところだ。</p><h2 id="画像をリサイズしたりキャプション付けたりする"><a href="#画像をリサイズしたりキャプション付けたりする" class="headerlink" title="画像をリサイズしたりキャプション付けたりする"></a>画像をリサイズしたりキャプション付けたりする</h2><p>記事に写真を載せたりするために、こんな <a href="https://github.com/dolpen/dolpen.net/blob/master/scripts/win64/exif-eraser.ps1">スクリプト</a> を書いてリサイズ、GPS情報削除、リネーム、ファイル移動などを一括で行うようにした。また、 <a href="https://www.npmjs.com/package/hexo-image-caption">hexo-image-caption</a> プラグインで記事本文に画像のキャプションを表示するようにした。</p>]]></content>
+        
+        
+        
+        
+        <summary type="html">&lt;h2 id=&quot;寸胴は一家に一つはあってもいい&quot;&gt;&lt;a href=&quot;#寸胴は一家に一つはあってもいい&quot; class=&quot;headerlink&quot; title=&quot;寸胴は一家に一つはあってもいい&quot;&gt;&lt;/a&gt;寸胴は一家に一つはあってもいい&lt;/h2&gt;&lt;p&gt;近所のスーパーで白菜がひと玉150円</summary>
+        
+        
+        
+        
+        <category term="生活" scheme="http://dolpen.net/categories/%E7%94%9F%E6%B4%BB/"/>
+        
+        
+        <category term="食" scheme="http://dolpen.net/tags/%E9%A3%9F/"/>
+        
+    </entry>
     
     <entry>
         <title>椅子を買ってよかった</title>
