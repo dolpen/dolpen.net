@@ -8,3 +8,6 @@ stylesheets:
 # scripts loaded in the end of the body
 scripts:
   - /js/zero.js
+
+# ogp settings
+twitter: dolpen
