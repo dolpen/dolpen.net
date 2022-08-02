@@ -49,7 +49,7 @@ jobs:
           cp -f ./db.json db/
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3.8.0
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: ./public
+        with:
+          deploy_key: ${{ secrets.ACTION_DEPLOY_KEY }}
+          publish_branch: gh-pages
+          publish_dir: ./public
