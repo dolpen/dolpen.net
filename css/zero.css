@@ -1,11 +1,11 @@
 :root {
-    --x-width: 40rem;
+    --x-width: 48rem;
 }
 
 html {
     color: #111;
     font-family: sans-serif;
-    line-height: 1.8;
+    line-height: 1.6;
     font-size: 16px;
 }
 
@@ -20,7 +20,6 @@ html {
         font-size: 24px;
     }
 }
-
 
 body {
     margin: 1rem 4rem 4rem 4rem;
@@ -58,7 +57,7 @@ ul.articles, ul.groups {
 time {
     color: #559;
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.5rem;
 }
 
 /*-- article */
@@ -68,6 +67,7 @@ article section.content p {
     padding-left: 1rem;
 }
 
+
 h1 {
     font-size: 1.5rem;
 }
@@ -76,36 +76,71 @@ h2 {
     font-size: 1.2rem;
 }
 
+
+blockquote {
+    margin: 0 0 0 1.5rem;
+    padding: 0 0.5rem;
+    background: #ddd;
+}
+
+table {
+    width: auto;
+    border: 1px solid #555;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    color: #ddd;
+    padding: 5px;
+    border-bottom: 1px solid #555;
+    border-left: 1px solid #555;
+    background: #777;
+    font-weight: bold;
+    text-align: center;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #555;
+    border-left: 1px solid #555;
+}
+
+tr:nth-child(2n+1) {
+    background: #ddd;
+}
+
 .related li {
     display: inline-block;
-    margin: 0 .5em;
-    padding: 0 .25em;
-    min-width: 1.5em;
+    margin: 0 0.5rem;
+    padding: 0 0.5rem;
+    min-width: 1.5rem;
     text-align: center;
 }
 
 .related li.category {
-    background: #8888dd;
+    background: #88d;
 }
 
 .related li.tag {
-    background: #db7f3d;
-    border-radius: 2em;
+    background: #d83;
+    border-radius: 2rem;
 }
 
 .related a {
-    color: #111111;
+    color: #111;
     text-decoration: none;
 }
+
 p img {
     display: block;
-    margin: 1em auto;
+    margin: 1rem auto;
     max-width: 100%;
 }
 
 span.caption {
     display: block;
-    margin: 1em auto;
+    margin: 1rem auto;
     font-size: 12px;
     text-align: center;
 }

@@ -1,0 +1,155 @@
+<!doctype html>
+
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <title>テイム時ステータス計算 [ dolpen.net ]</title>
+  <link rel="canonical" href="http://dolpen.net/note/ark/taming.html/">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <meta name="description" content="テイムした直後の能力計算このRexを例に上げる。   NOTE:テイムを完了させると、テイムボーナスに応じて、最大で テイム前のレベルの半分 - 1 レベルが上乗せされる。Lv150のRexを運良く発見し、テイムボーナス最大のままテイム完了すると、追加で74レベル上がり、224レベルになる。このときのレベルを 野生レベル という。今回はそうして得た野生レベル224の個体が例になる。  改めて能力表">
+<meta property="og:type" content="website">
+<meta property="og:title" content="テイム時ステータス計算">
+<meta property="og:url" content="http://dolpen.net/note/ark/taming.html/">
+<meta property="og:site_name" content="dolpen.net">
+<meta property="og:description" content="テイムした直後の能力計算このRexを例に上げる。   NOTE:テイムを完了させると、テイムボーナスに応じて、最大で テイム前のレベルの半分 - 1 レベルが上乗せされる。Lv150のRexを運良く発見し、テイムボーナス最大のままテイム完了すると、追加で74レベル上がり、224レベルになる。このときのレベルを 野生レベル という。今回はそうして得た野生レベル224の個体が例になる。  改めて能力表">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2022-08-02T03:34:28.659Z">
+<meta property="article:modified_time" content="2022-08-02T03:34:28.659Z">
+<meta property="article:author" content="dolpen">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:creator" content="@dolpen">
+  <link rel="stylesheet" href="/css/zero.css" />
+<meta name="generator" content="Hexo 6.2.0"></head>
+<body>
+<header>
+  <nav class="head">
+    <a href="/">トップページ</a>
+    <ul>
+      
+      
+      <li><a href="/about">このページについて</a></li>
+      
+      
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+
+<article class="page">
+    <h1>テイム時ステータス計算</h1>
+    <h3 id="テイムした直後の能力計算"><a href="#テイムした直後の能力計算" class="headerlink" title="テイムした直後の能力計算"></a>テイムした直後の能力計算</h3><p><a target="_blank" rel="noopener" href="https://www.dododex.com/stat-calculator/rex/224?&ph=35&ps=27&po=32&pf=33&pw=29&pd=36&name=example">このRex</a><br>を例に上げる。 </p>
+<blockquote>
+<p><strong><em>NOTE:</em></strong><br>テイムを完了させると、テイムボーナスに応じて、最大で <code>テイム前のレベルの半分 - 1</code> レベルが上乗せされる。<br>Lv150のRexを運良く発見し、テイムボーナス最大のままテイム完了すると、追加で74レベル上がり、224レベルになる。<br>このときのレベルを <strong>野生レベル</strong> という。今回はそうして得た野生レベル224の個体が例になる。</p>
+</blockquote>
+<p>改めて能力表を見てみる</p>
+<table>
+<thead>
+<tr>
+<th>能力</th>
+<th>基礎値</th>
+<th>成長率(野生)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>体力</td>
+<td>1100</td>
+<td>220</td>
+</tr>
+<tr>
+<td>スタミナ</td>
+<td>420</td>
+<td>42</td>
+</tr>
+<tr>
+<td>酸素</td>
+<td>150</td>
+<td>15</td>
+</tr>
+<tr>
+<td>食料</td>
+<td>3000</td>
+<td>300</td>
+</tr>
+<tr>
+<td>重量</td>
+<td>500</td>
+<td>10</td>
+</tr>
+<tr>
+<td>攻撃[%]</td>
+<td>100%</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>移動速度[%]</td>
+<td>100%</td>
+<td>0%</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>基礎値 / BASE</code> とは、その種の個体がLv1のときに持つ能力実数値だ。ポケモンで言えば <strong>種族値</strong> なので、ここではそう呼ぶことにする。</li>
+<li><code>成長率(野生) / INC. PER LVL</code> は、野生レベル1加算あたりの実数値増加量である。</li>
+</ul>
+<p>能力実数値の決定は、以下のように行われる</p>
+<blockquote>
+<p>下記の内容を <code>野生レベル - 1</code> 回繰り返す<br>　体力、スタミナ、酸素、食料、重量、攻撃、移動速度からランダムで1つ抽選される。<br>　抽選された能力に個体値が加算される</p>
+<p><code>テイム時実数値 = 種族値 + 成長率(野生) * 個体値</code></p>
+</blockquote>
+<p>ここに、下記のテイム時補正値に応じて補正が入る。Rexに関しては体力と攻撃力が対象だ。</p>
+<table>
+<thead>
+<tr>
+<th>能力</th>
+<th>テイム時加算</th>
+<th>テイム時乗算</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>体力</td>
+<td>0.07</td>
+<td>-</td>
+</tr>
+<tr>
+<td>攻撃[%]</td>
+<td>7%</td>
+<td>17.6%</td>
+</tr>
+</tbody></table>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">体力 = 補正前実数値 + 0.07</span><br><span class="line">攻撃[%] = (補正前実数値[%] + 7[%]) * (1.176)</span><br></pre></td></tr></table></figure>
+
+<p>テイム時補正は体力、攻撃、移動速度に設定されることが多い。野生の準ボスレベルの種に対して、攻撃力に大幅なマイナス補正が入ることもある。</p>
+<p>このRexは、同じレベル帯の野生個体をテイムした場合と比べて、スタミナは低く重いものは持てないが、体力や攻撃力は高めなので殴り合いで生き残りやすいかもしれない、と評価できるだろう。</p>
+<p>計算ルールに関しては上記のとおりだが、強い個体を探す上での課題点も明らかになった。</p>
+<ul>
+<li>個体値の加算対象がどのように抽選されるかを <strong>制御する方法はない</strong></li>
+<li>特に、テイム完了後でなければテイムボーナスを踏まえた個体値計算が出来ない。</li>
+<li>移動速度の <code>成長率(野生) / INC. PER LVL</code> は <strong>ゼロ</strong> である</li>
+</ul>
+<blockquote>
+<p><strong><em>NOTE:</em></strong><br>能力表に設定された数値を参照することで、個体値が逆算可能なことが分かる。<br>しかし唯一移動速度だけは <strong>他の個体値を全て計算し、<code>野生レベル-1</code> から減算することでしか把握できない</strong> ということも明らかになった。</p>
+</blockquote>
+<p>この課題を咀嚼することで、強い個体とはなにかが明らかになった。</p>
+<ul>
+<li>前提として、野生状態でのレベルは高ければ高いほどよい</li>
+<li>テイムボーナスはテイム直後のレベルに直結するため、高ければ高いほどよい</li>
+<li>移動速度の抽選回数が少ない（無駄に個体値が振られない）</li>
+<li>目的とする能力の個体値が高い</li>
+</ul>
+<blockquote>
+<p><strong><em>NOTE:</em></strong><br>テイムした後に経験を積んで、手動で振り分けたレベル加算については、ここで言う個体値によるステータス上昇とは全く別の扱いになるので気をつけてほしい。<br>この計算ルールは、テイムが完了してニックネームを設定した直後であることを前提としているため、個体値を振り返りたい場合はここでスクリーンショットを撮影しておきたい。</p>
+</blockquote>
+
+</article>
+
+
+
+</main>
+<footer><nav class="foot">
+  <a href="/">トップページ</a>
+  
+</nav></footer>
+</body>
+</html>
