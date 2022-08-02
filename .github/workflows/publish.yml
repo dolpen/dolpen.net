@@ -8,21 +8,18 @@ jobs:
   build-deploy:
     runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@master
+      - name: checkout
+        uses: actions/checkout@v3
       - name: build
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: '15.x'
-      - name: Cache node modules
-        uses: actions/cache@v1
-        id: cache_node_modules
-        with:
-          path: node_modules
-          key: ${{ runner.OS }}-npm-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.OS }}-npm-
+          cache: npm
+      - name: npm update
+        if: ${{ steps.setup_node_id.outputs.cache-hit != 'true' }}
+        run: npm install
       - name: Cache public
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         id: public
         with:
           path: public
@@ -30,16 +27,13 @@ jobs:
           restore-keys: |
             ${{ runner.OS }}-public-
       - name: Cache db.json
-        uses: actions/cache@v1
+        uses: actions/cache@v3
         id: db
         with:
           path: db
           key: ${{ runner.OS }}-db-${{ github.sha }}
           restore-keys: |
             ${{ runner.OS }}-db-
-      - name: npm ci
-        if: steps.cache_node_modules.cache-hit != 'true'
-        run: npm install
       - name: prepare db
         run: |
           if [ -e db/db.json ]; then
@@ -54,7 +48,7 @@ jobs:
           mkdir -p db
           cp -f ./db.json db/
       - name: deploy
-        uses: peaceiris/actions-gh-pages@v2.4.0
+        uses: peaceiris/actions-gh-pages@v3.8.0
         env:
           ACTIONS_DEPLOY_KEY: ${{ secrets.ACTION_DEPLOY_KEY }}
           PUBLISH_BRANCH: gh-pages
